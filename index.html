@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz Aniversário ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:linear-gradient(180deg,#0b0b1c,#141432,#1b1b45);
+
+height:100vh;
+
+overflow:hidden;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+}
+
+.card{
+
+width:90%;
+max-width:850px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(12px);
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:0 0 40px rgba(255,0,100,.25);
+
+text-align:center;
+
+position:relative;
+
+z-index:2;
+
+}
+
+h1{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+}
+
+#texto{
+
+font-size:20px;
+
+line-height:1.9;
+
+min-height:320px;
+
+white-space:pre-wrap;
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:15px 35px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff4d88;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
+.heart{
+
+position:absolute;
+
+bottom:-20px;
+
+color:#ff6b9c;
+
+animation:subir linear infinite;
+
+opacity:.8;
+
+}
+
+@keyframes subir{
+
+0%{
+
+transform:translateY(0) scale(.6);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-110vh) scale(1.3);
+
+opacity:0;
+
+}
+
+}
+
+#surpresa{
+
+display:none;
+
+margin-top:30px;
+
+font-size:22px;
+
+animation:fade 2s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:scale(.9);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎉 Feliz Aniversário, Princesa ❤️</h1>
+
+<p id="texto"></p>
+
+<button onclick="mostrar()">
+Clique para ver uma surpresa ❤️
+</button>
+
+<div id="surpresa">
+
+<h2>🌹</h2>
+
+<p>
+
+Espero que este seja apenas um dos muitos aniversários incríveis que ainda virão na sua vida.
+
+Continue sendo essa pessoa especial, gentil e iluminada.
+
+Nunca deixe de sorrir, porque seu sorriso tem um jeito único de deixar tudo mais bonito.
+
+Feliz aniversário, princesa. ❤️
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const mensagem=`
+
+Hoje é um dia muito especial...
+
+Quero aproveitar esse momento para te desejar um feliz aniversário.
+
+Princesa, espero que o seu novo ciclo seja cheio de felicidade, paz, saúde, conquistas e muitos motivos para sorrir.
+
+Mesmo que às vezes as palavras pareçam pequenas, queria que você soubesse que você é uma pessoa muito importante para mim.
+
+Você merece viver dias incríveis, realizar seus sonhos e receber todo o carinho que oferece às pessoas ao seu redor.
+
+Nunca perca esse seu jeitinho que faz tanta diferença.
+
+Obrigado por existir e por tornar os dias de quem está perto de você mais leves.
+
+Espero que Deus continue iluminando seus caminhos e que cada novo dia traga novas oportunidades e momentos inesquecíveis.
+
+Aproveite muito o seu aniversário, sorria bastante, coma tudo o que tiver vontade e guarde este dia com muito carinho.
+
+Você merece tudo de melhor.
+
+Com muito carinho...
+
+❤️
+
+`;
+
+let i=0;
+
+function escrever(){
+
+if(i<mensagem.length){
+
+document.getElementById("texto").innerHTML+=mensagem.charAt(i);
+
+i++;
+
+setTimeout(escrever,28);
+
+}
+
+}
+
+escrever();
+
+function mostrar(){
+
+document.getElementById("surpresa").style.display="block";
+
+}
+
+for(let i=0;i<40;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(10+Math.random()*30)+"px";
+
+h.style.animationDuration=(6+Math.random()*8)+"s";
+
+h.style.animationDelay=Math.random()*8+"s";
+
+document.body.appendChild(h);
+
+}
+
+</script>
+
+</body>
+</html>
