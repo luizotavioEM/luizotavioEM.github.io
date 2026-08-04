@@ -1,294 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Feliz Aniversário ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-
-background:linear-gradient(180deg,#0b0b1c,#141432,#1b1b45);
-
-height:100vh;
-
-overflow:hidden;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-color:white;
-
-}
-
-.card{
-
-width:90%;
-max-width:850px;
-
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(12px);
-
-padding:40px;
-
-border-radius:25px;
-
-box-shadow:0 0 40px rgba(255,0,100,.25);
-
-text-align:center;
-
-position:relative;
-
-z-index:2;
-
-}
-
-h1{
-
-font-size:45px;
-
-margin-bottom:20px;
-
-}
-
-#texto{
-
-font-size:20px;
-
-line-height:1.9;
-
-min-height:320px;
-
-white-space:pre-wrap;
-
-}
-
-button{
-
-margin-top:30px;
-
-padding:15px 35px;
-
-font-size:18px;
-
-border:none;
-
-border-radius:40px;
-
-background:#ff4d88;
-
-color:white;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-button:hover{
-
-transform:scale(1.08);
-
-}
-
-.heart{
-
-position:absolute;
-
-bottom:-20px;
-
-color:#ff6b9c;
-
-animation:subir linear infinite;
-
-opacity:.8;
-
-}
-
-@keyframes subir{
-
-0%{
-
-transform:translateY(0) scale(.6);
-
-opacity:0;
-
-}
-
-20%{
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateY(-110vh) scale(1.3);
-
-opacity:0;
-
-}
-
-}
-
-#surpresa{
-
-display:none;
-
-margin-top:30px;
-
-font-size:22px;
-
-animation:fade 2s;
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:scale(.9);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="card">
+<div id="stars"></div>
+<div id="hearts"></div>
 
-<h1>🎉 Feliz Aniversário, Princesa ❤️</h1>
+<section id="inicio">
 
-<p id="texto"></p>
+<h1>Feliz Aniversário</h1>
 
-<button onclick="mostrar()">
-Clique para ver uma surpresa ❤️
+<h2>Princesa ❤️</h2>
+
+<p class="sub">
+
+Preparei uma pequena surpresa...
+
+Espero que você goste.
+
+</p>
+
+<button id="entrar">
+
+Entrar
+
 </button>
 
-<div id="surpresa">
+</section>
 
-<h2>🌹</h2>
+<section id="conteudo">
+
+<div class="spotify">
+
+<h2>🎵 Nossa Música</h2>
 
 <p>
 
-Espero que este seja apenas um dos muitos aniversários incríveis que ainda virão na sua vida.
+Antes de continuar...
 
-Continue sendo essa pessoa especial, gentil e iluminada.
+clique abaixo e coloque nossa música para tocar.
 
-Nunca deixe de sorrir, porque seu sorriso tem um jeito único de deixar tudo mais bonito.
+</p>
+
+<a
+href="https://open.spotify.com/intl-pt/track/4hpcc2wq84pilUgDbIPkDN?si=0a970e893eba4c07"
+target="_blank">
+
+Ouvir no Spotify
+
+</a>
+
+</div>
+
+<div class="carta">
+
+<h2>💌 Para você...</h2>
+
+<p id="texto">
+
+Princesa...
+
+Hoje é um dia muito especial, porque é o dia em que o mundo ganhou uma pessoa incrível.
+
+Quero que saiba que fiz essa pequena surpresa com muito carinho.
+
+Talvez eu nunca consiga colocar em palavras tudo aquilo que gostaria de dizer, mas espero que cada detalhe desta página consiga demonstrar um pouco do carinho enorme que sinto por você.
+
+Desejo que o seu novo ciclo seja repleto de felicidade, saúde, paz e momentos inesquecíveis.
+
+Que você nunca deixe de sorrir, porque o seu sorriso tem um jeito especial de deixar tudo mais bonito.
+
+Você merece realizar todos os seus sonhos, conquistar tudo aquilo que deseja e continuar sendo essa pessoa maravilhosa que encanta quem tem a sorte de conhecer você.
+
+Obrigado por existir.
+
+Obrigado por fazer parte da minha vida.
+
+Espero que este aniversário seja apenas mais um entre muitos anos felizes que ainda virão.
+
+Nunca se esqueça do quanto você é especial.
 
 Feliz aniversário, princesa. ❤️
+
+Com carinho,
+
+Luiz.
 
 </p>
 
 </div>
 
+<div class="galeria">
+
+<h2>📷 Algumas fotos suas</h2>
+
+<div class="fotos">
+
+<img src="img/foto1.jpg">
+
+<img src="img/foto2.jpg">
+
+<img src="img/foto3.jpg">
+
 </div>
 
-<script>
+</div>
 
-const mensagem=`
+<div class="presente">
 
-Hoje é um dia muito especial...
+<h2>🎁 Ainda não acabou...</h2>
 
-Quero aproveitar esse momento para te desejar um feliz aniversário.
+<button id="abrir">
 
-Princesa, espero que o seu novo ciclo seja cheio de felicidade, paz, saúde, conquistas e muitos motivos para sorrir.
+Abrir presente
 
-Mesmo que às vezes as palavras pareçam pequenas, queria que você soubesse que você é uma pessoa muito importante para mim.
+</button>
 
-Você merece viver dias incríveis, realizar seus sonhos e receber todo o carinho que oferece às pessoas ao seu redor.
+</div>
 
-Nunca perca esse seu jeitinho que faz tanta diferença.
+<div id="mensagemFinal">
 
-Obrigado por existir e por tornar os dias de quem está perto de você mais leves.
+<h1>❤️</h1>
 
-Espero que Deus continue iluminando seus caminhos e que cada novo dia traga novas oportunidades e momentos inesquecíveis.
+<h2>
 
-Aproveite muito o seu aniversário, sorria bastante, coma tudo o que tiver vontade e guarde este dia com muito carinho.
+Feliz aniversário, princesa.
 
-Você merece tudo de melhor.
+</h2>
 
-Com muito carinho...
+<p>
 
-❤️
+Espero que você continue iluminando a vida das pessoas com esse jeitinho único que só você tem.
 
-`;
+Obrigado por tudo.
 
-let i=0;
+Nunca deixe de acreditar em você.
 
-function escrever(){
+✨
 
-if(i<mensagem.length){
+</p>
 
-document.getElementById("texto").innerHTML+=mensagem.charAt(i);
+<h3>
 
-i++;
+Feito especialmente por Luiz ❤️
 
-setTimeout(escrever,28);
+</h3>
 
-}
+</div>
 
-}
+</section>
 
-escrever();
-
-function mostrar(){
-
-document.getElementById("surpresa").style.display="block";
-
-}
-
-for(let i=0;i<40;i++){
-
-let h=document.createElement("div");
-
-h.className="heart";
-
-h.innerHTML="❤";
-
-h.style.left=Math.random()*100+"vw";
-
-h.style.fontSize=(10+Math.random()*30)+"px";
-
-h.style.animationDuration=(6+Math.random()*8)+"s";
-
-h.style.animationDelay=Math.random()*8+"s";
-
-document.body.appendChild(h);
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
